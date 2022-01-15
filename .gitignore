@@ -1,2 +1,2 @@
-casc
-makefile.config.local
+*.local
+*.swp
