@@ -3,7 +3,7 @@
 include makefile.config
 -include makefile.config.local
 
-.PHONY: build debug default logs remove run shell start status stop
+.PHONY: build debug default logs remove run shell start status stop test test-code
 
 default: build
 
@@ -47,3 +47,26 @@ status:
 
 stop:
 	docker stop $(ARGS) $(name)
+
+test: test
+	docker create \
+		--name=$(name)-test \
+		--rm=true \
+		--tty=true \
+		$(testargs) \
+		$(registry)$(namespace)/$(image):$(tag) \
+		/test \
+		$(ARGS)
+	docker cp test $(name)-test:/
+	docker start --attach=true $(name)-test
+
+test-code: Dockerfile
+	docker run \
+		--interactive=true \
+		--rm=true \
+		hadolint/hadolint:latest-debian \
+		hadolint \
+		$(ARGS) \
+		- \
+		< Dockerfile
+
