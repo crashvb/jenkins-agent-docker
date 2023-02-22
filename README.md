@@ -15,7 +15,11 @@ None.
 
 ## Healthcheck Scripts
 
-None.
+### jshell
+
+The embedded healthcheck script is located at `/etc/healthcheck.d/jshell` and performs the following actions:
+
+1. Verifies that jshell is operational.
 
 ## Standard Configuration
 
@@ -23,6 +27,10 @@ None.
 
 ```
 /
+├─ etc/
+│  ├─ entrypoint.d/
+│  └─ healthcheck.d/
+│     └─ jshell
 ├─ home/
 │  └─ jenkins/
 │     ├─ agent/
