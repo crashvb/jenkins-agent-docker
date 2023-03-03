@@ -13,14 +13,6 @@ Alpine image with jre and docker-cli.
 
 None.
 
-## Healthcheck Scripts
-
-### jshell
-
-The embedded healthcheck script is located at `/etc/healthcheck.d/jshell` and performs the following actions:
-
-1. Verifies that jshell is operational.
-
 ## Standard Configuration
 
 ### Container Layout
