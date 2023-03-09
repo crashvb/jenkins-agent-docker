@@ -1,4 +1,4 @@
-FROM crashvb/base:22.04-202303031605@sha256:ffa63321cadb7fdc937508b2976c6f919576bcbe93122a27fded24343d818315 AS parent
+FROM crashvb/base:22.04-202303080156@sha256:7b0aea85d0f02978f4171e7dab3fe453e94918b138bea4966ebf241ce82fde23 AS parent
 
 FROM jenkins/agent:alpine-jdk11@sha256:aabedf170a30b7f3b255c679a895a8f7dfcd712f5f51f5309c8f9957ba6e2264
 ARG org_opencontainers_image_created=undefined
