@@ -1,11 +1,11 @@
 FROM crashvb/base:24.04-202508010159@sha256:f7b3a015c749980c2427241686134908e4f82e2c0b72688dac37cb59e4e05169 AS parent
 
-FROM jenkins/agent:alpine-jdk17@sha256:4390c5fa71e14347b733510e9b659c6e57df40545abf509ea082459ba4655a0f
+FROM jenkins/agent:alpine-jdk12@sha256:4c79c3fffb35027c7c000cd6cdaa0db61ba4dcc78a53f465a13857f5dfc6413b
 ARG org_opencontainers_image_created=undefined
 ARG org_opencontainers_image_revision=undefined
 LABEL \
 	org.opencontainers.image.authors="Richard Davis <crashvb@gmail.com>" \
-	org.opencontainers.image.base.digest="sha256:4390c5fa71e14347b733510e9b659c6e57df40545abf509ea082459ba4655a0f" \
+	org.opencontainers.image.base.digest="sha256:4c79c3fffb35027c7c000cd6cdaa0db61ba4dcc78a53f465a13857f5dfc6413b" \
 	org.opencontainers.image.base.name="jenkins/agent:alpine-jdk17" \
 	org.opencontainers.image.created="${org_opencontainers_image_created}" \
 	org.opencontainers.image.description="The 'Official Jenkins Agent Base Docker image' with the docker-cli package." \
